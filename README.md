@@ -17,7 +17,7 @@ To serve the site from a simple Node development server:
 
 Then launch the site from your favourite browser:
 
-[__http://localhost:3000/__](http://localhost:3000/)
+[__http://localhost:3000/khoravr-portfolio/__](http://localhost:3000/)
 
 
 ## License
