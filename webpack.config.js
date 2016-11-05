@@ -13,6 +13,7 @@ const config = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'app.[hash].js',
+    publicPath: '/',
   },
   resolve: {
     modulesDirectories: ['src', 'node_modules'],
