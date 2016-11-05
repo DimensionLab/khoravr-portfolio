@@ -4,7 +4,7 @@ import { Route, IndexRoute } from 'react-router';
 import { App, HomePage } from 'components';
 
 const routes = (
-  <Route path="/" component={App}>
+  <Route path="/khoravr-portfolio" component={App}>
     <IndexRoute component={HomePage} />
     {/* <Route path="/sample-page" component={SamplePage} /> */}
   </Route>
