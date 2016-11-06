@@ -1,7 +1,7 @@
 {
   "name": "khoravr-portfolio",
   "description": "KhoraVR portfolio.",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "start": "node server",
@@ -10,8 +10,9 @@
     "lint": "eslint 'src/**/*.js' webpack.config.js server.js",
     "clean": "del 'dist/!(.git*|Procfile)**'",
     "copy": "copyfiles -u 1 public/* public/**/* dist",
-    "build": "npm run clean && npm run copy && cross-env NODE_ENV=production webpack",
-    "deploy": "npm run build && gh-pages -d dist"
+    "build": "npm run clean && npm run copy && webpack",
+    "build:prod": "npm run clean && npm run copy && cross-env NODE_ENV=production webpack",
+    "deploy": "npm run build:prod && gh-pages -d dist"
   },
   "jest": {
     "modulePathIgnorePatterns": [
@@ -68,7 +69,10 @@
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-hot-loader": "^3.0.0-beta.6",
+    "react-redux": "^4.4.5",
     "react-router": "^2.8.1",
+    "react-router-redux": "^4.0.7",
+    "redux": "^3.6.0",
     "styled-components": "^1.0.7"
   }
 }

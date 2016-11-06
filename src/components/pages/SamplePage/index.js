@@ -1,9 +1,9 @@
 import React from 'react';
 import { Grid, Lights, PrimaryNavigation, SecondaryNavigation, Sky, VRScene } from 'components';
 
-import skyImage from './01_360_balet.jpg';
+import skyImage from './02_360_yosemite.jpg';
 
-const HomePage = () => {
+const SamplePage = () => {
   return (
     <VRScene>
       <Lights position="0 1.25 0" />
@@ -15,4 +15,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default SamplePage;
