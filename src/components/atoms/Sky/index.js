@@ -1,8 +1,7 @@
 import { Entity } from 'aframe-react';
 import React, { PropTypes } from 'react';
 
-const Sky = ({src}) => {
-  console.log(src);
+const Sky = ({ src }) => {
   return (
     <Entity
       geometry={{ primitive: 'sphere', radius: 100 }}

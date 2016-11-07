@@ -1,5 +1,5 @@
 export const initialState = {
-  menuExpanded: ''
+  menuExpanded: '',
 };
 
 export const isMenuExpanded = (state = initialState) => state.menuExpanded || false;

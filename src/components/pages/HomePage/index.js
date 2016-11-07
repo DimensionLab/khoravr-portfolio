@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Lights, PrimaryNavigation, SecondaryNavigation, Sky, VRScene } from 'components';
+import { Lights, PrimaryNavigation, SecondaryNavigation, Sky, VRScene } from 'components';
 
 import skyImage from './01_360_balet.jpg';
 
