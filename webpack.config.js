@@ -7,13 +7,14 @@ const port = process.env.PORT || 3000;
 const DEBUG = process.env.NODE_ENV !== 'production';
 
 const config = {
-  devtool: DEBUG ? 'source-map': false,
+  devtool: DEBUG ? 'source-map' : false,
   entry: [
     path.join(__dirname, 'src'),
   ],
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'app.[hash].js',
+    publicFolder: '/',
   },
   resolve: {
     modulesDirectories: ['src', 'node_modules'],

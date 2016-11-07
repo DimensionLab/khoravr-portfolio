@@ -12,7 +12,7 @@
     "copy": "copyfiles -u 1 public/* public/**/* dist",
     "build": "npm run clean && npm run copy && webpack",
     "build:prod": "npm run clean && npm run copy && cross-env NODE_ENV=production webpack",
-    "deploy": "npm run build:prod && gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "jest": {
     "modulePathIgnorePatterns": [
