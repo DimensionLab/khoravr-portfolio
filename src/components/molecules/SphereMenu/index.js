@@ -6,7 +6,7 @@ const SphereMenu = ({ color, position, radius, menuExpanded, expandMenu, ...prop
     <Entity
       animation__bounce={{ property: 'scale', dir: 'alternate', dur: 100, loop: true, to: '1.1 1.1 1.1', startEvents: 'click' }}
       geometry={{ primitive: 'sphere', radius }}
-      material={{ shader: 'flat', color }}
+      material={{ shader: 'standard', color }}
       scale={menuExpanded ? '1.5 1.5 1.5' : '1 1 1'}
       position={position}
       onClick={() => expandMenu(menuExpanded)}

@@ -30,7 +30,7 @@ const config = {
   ],
   module: {
     noParse: [
-      /node_modules\/aframe\/dist\/aframe.js/,
+      /node_modules\/aframe\/dist\/aframe-master.js/,
       /node_modules\/cannon\/build\/cannon.js/,
     ],
     loaders: [

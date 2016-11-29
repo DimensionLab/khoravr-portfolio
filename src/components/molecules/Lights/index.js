@@ -4,9 +4,8 @@ import React from 'react';
 const Lights = (props) => {
   return (
     <Entity {...props}>
-      <Entity light={{ type: 'ambient', color: '#888' }} />
-      <Entity light={{ type: 'directional', intensity: 0.5 }} position={[-1, 1, 0]} />
-      <Entity light={{ type: 'directional', intensity: 1 }} position={[1, 1, 0]} />
+      <Entity light={{ type: 'directional', color: '#b8dba9', decay: 1.66, distance: 0.66, intensity: 1.54 }} position={[0, 0, 2]} />
+      <Entity light={{ angle: 90, color: '#ff9927', groundColor: '#fcfffe', decay: 2, intensity: 2.76 }} position={[0, 2.37, -152.93]} />
     </Entity>
   );
 };

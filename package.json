@@ -58,7 +58,7 @@
     "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
-    "aframe": "^0.3.2",
+    "aframe": "github:aframevr/aframe",
     "aframe-animation-component": "^3.0.4",
     "aframe-bmfont-text-component": "^0.1.4",
     "aframe-extras": "^2.6.0",
