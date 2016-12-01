@@ -1,7 +1,7 @@
 {
-  "name": "khoravr-portfolio",
-  "description": "KhoraVR portfolio.",
-  "version": "0.2.0",
+  "name": "mathvr",
+  "description": "Math in VR.",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node server",
@@ -68,6 +68,7 @@
     "aframe-text-component": "^0.3.0",
     "babel-polyfill": "^6.16.0",
     "lodash": "^4.16.4",
+    "mathjs": "^3.8.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-hot-loader": "^3.0.0-beta.6",

@@ -8,8 +8,6 @@ import configureStore from 'store/configure';
 
 import routes from 'routes';
 
-import './lib/water-material';
-
 const store = configureStore({}, browserHistory);
 const history = syncHistoryWithStore(browserHistory, store);
 const root = document.getElementById('app');

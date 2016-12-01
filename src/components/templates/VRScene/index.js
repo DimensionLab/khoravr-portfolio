@@ -3,23 +3,27 @@ import 'aframe-animation-component';
 import 'aframe-text-component';
 import 'babel-polyfill';
 import { Scene } from 'aframe-react';
-import React, { PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react';
 import extras from 'aframe-extras';
 import { Camera } from 'components';
 
-extras.registerAll();
+class VRScene extends Component {
+  static propTypes = {
+    children: PropTypes.any.isRequired,
+  }
 
-const VRScene = ({ children, ...props }) => {
-  return (
-    <Scene {...props}>
-      <Camera look-controls="" position="0 1.8 0" />
-      {children}
-    </Scene>
-  );
-};
+  componentWillMount() {
+    // Initialize aframe-extras
+    // extras.registerAll();
+  }
 
-VRScene.propTypes = {
-  children: PropTypes.any.isRequired,
+  render() {
+    return (
+      <Scene {...this.props}>
+        {this.props.children}
+      </Scene>
+    );
+  }
 };
 
 export default VRScene;
