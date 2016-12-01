@@ -3,12 +3,12 @@ import { expandMenu, fromSphereMenu } from 'store';
 
 import { SphereMenu } from 'components';
 
-const mapStateToProps = state => ({
-  menuExpanded: fromSphereMenu.isMenuExpanded(state),
+const mapStateToProps = (state, { id }) => ({
+  menuExpanded: fromSphereMenu.isMenuExpanded(state, id),
 });
 
-const mapDispatchToProps = (dispatch, { menuExpanded }) => ({
-  expandMenu: () => dispatch(expandMenu(menuExpanded)),
+const mapDispatchToProps = (dispatch, { id }) => ({
+  expandMenu: () => dispatch(expandMenu(id)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SphereMenu);

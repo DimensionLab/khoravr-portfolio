@@ -1,5 +1,5 @@
-export const TOGGLE_EXPAND_SPHERE_MENU = 'TOGGLE_EXPAND_SPHERE_MENU';
+export const EXPAND_SPHERE_MENU = 'EXPAND_SPHERE_MENU';
 
-export const expandMenu = (menuExpanded) => {
-  return { type: TOGGLE_EXPAND_SPHERE_MENU, menuExpanded: !menuExpanded };
+export const expandMenu = (id) => {
+  return { type: EXPAND_SPHERE_MENU, id };
 };
