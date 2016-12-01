@@ -5,6 +5,3 @@ export Sky from './Sky';
 export Text from './Text';
 export Ocean from './Ocean';
 export Plane from './Plane';
-export ParametricFunction from './ParametricFunction';
-export LeftController from './LeftController';
-export RightController from './RightController';

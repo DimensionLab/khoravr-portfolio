@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 
-import { App, HomePage, PageNotFound } from 'components';
+import { App, HomePage, PageNotFound, SamplePage } from 'components';
 
 function checkForRedirect(nextState, replace) {
   const location = nextState.location;
@@ -34,7 +34,7 @@ function parseRedirectQuery(query, replace) {
   replace(redirectTo);
 }
 
-const gitHubRepoName = 'mathworld';
+const gitHubRepoName = 'khoravr-portfolio';
 const domain = 'https://dimensionlab.github.io';
 function redirectToDomain() {
   window.location.replace(domain);
@@ -43,6 +43,7 @@ function redirectToDomain() {
 const routes = (
   <Route path="/" component={App} onEnter={checkForRedirect}>
     <IndexRoute component={HomePage} />
+    <Route path="/sample-page" component={SamplePage} />
     <Route path="*" mapMenuTitle="Page Not Found" component={PageNotFound} />
   </Route>
 );

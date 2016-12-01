@@ -1,29 +1,17 @@
 import React from 'react';
-import { Entity } from 'aframe-react';
-import { Lights, ParametricFunction, Sky, VRScene, LeftController, RightController, Plane, Grid } from 'components';
+import { Lights, PrimaryNavigation, SecondaryNavigation, Sky, VRScene, Ocean, Plane } from 'components';
 
 const HomePage = () => {
   return (
-    <VRScene>
-      <Lights />
-      {/* Function box with grid */}
-      <Entity
-        id="function-box"
-        class="grabbable"
-        geometry="primitive: box; width: 1; height: 1; depth: 1;"
-        material="transparent: true; opacity: 0; shader: standard"
-        scale="0.2 0.2 0.2"
-        position="0 1.3 -0.6">
-        <Grid step={20} size={2} colorCenterLine="red" colorGrid="#c7c7c7" axes="" material={{ opacity: 0.5 }} />
-        <ParametricFunction />
-      </Entity>
-
+    <VRScene fog="type: exponential; color: #AAB; far: 200; near: 0; density: 0.01;">
+      <Lights position="0 1.25 0" />
+      <PrimaryNavigation position="0 1.25 -3.95" />
+      <SecondaryNavigation position="-0.10 1.25 2.38" />
+      <Ocean />
+      {/* <Grid /> */}
       <Sky />
 
-      <LeftController />
-      <RightController />
-
-      <Plane />
+      <Plane width={1000} height={500} position={[0, 0.03, 235]} />
     </VRScene>
   );
 };

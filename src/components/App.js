@@ -11,9 +11,6 @@ class App extends Component {
       body {
         margin: 0;
       }
-      .a-canvas {
-        position: relative;
-      }
     `;
   }
 
