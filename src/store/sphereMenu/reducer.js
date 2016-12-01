@@ -1,4 +1,4 @@
-//import { initialState } from './selectors';
+// import { initialState } from './selectors';
 import { EXPAND_SPHERE_MENU } from './actions';
 
 const initialState = [
@@ -13,7 +13,7 @@ const initialState = [
 export default (state = initialState, action) => {
   switch (action.type) {
     case EXPAND_SPHERE_MENU:
-      return state.map(sphere => {
+      return state.map((sphere) => {
         if (sphere.id !== action.id) { return sphere; }
 
         return {

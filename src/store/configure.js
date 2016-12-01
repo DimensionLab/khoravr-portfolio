@@ -6,7 +6,7 @@ import { reducer } from '.';
 const configureStore = (initialState, history) => {
   const hasWindow = typeof window !== 'undefined';
 
-  const composeEnhancers = hasWindow && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+  const composeEnhancers = hasWindow && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; // eslint-disable-line no-underscore-dangle, no-mixed-operators
 
   const finalCreateStore = composeEnhancers(
     applyMiddleware(routerMiddleware(history), createLogger())

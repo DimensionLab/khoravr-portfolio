@@ -1,7 +1,7 @@
 import React from 'react';
 
 // @TODO: make cursor great again - loading white ring around it
-//const coJe = text => console.log(text);
+// const coJe = text => console.log(text);
 
 const Cursor = (props) => {
   return (
@@ -13,7 +13,7 @@ const Cursor = (props) => {
       opacity="0.5"
       geometry="primitive: circle"
       scale="0.01 0.01 0.01"
-      //onClick={() => coJe('co je')}
+      // onClick={() => coJe('co je')}
       {...props}
     />
   );
