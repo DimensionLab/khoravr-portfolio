@@ -1,13 +1,15 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import { routerMiddleware } from 'react-router-redux';
+import createLogger from 'redux-logger';
 import { reducer } from '.';
 
 const configureStore = (initialState, history) => {
   const hasWindow = typeof window !== 'undefined';
 
-  const finalCreateStore = compose(
-    applyMiddleware(routerMiddleware(history)),
-    hasWindow && window.devToolsExtension ? window.devToolsExtension() : f => f
+  const composeEnhancers = hasWindow && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+  const finalCreateStore = composeEnhancers(
+    applyMiddleware(routerMiddleware(history), createLogger())
   )(createStore);
 
   const store = finalCreateStore(reducer, initialState);
